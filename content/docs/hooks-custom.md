@@ -227,8 +227,8 @@ function useReducer(reducer, initialState) {
   const [state, setState] = useState(initialState);
 
   function dispatch(action) {
-    const nextState = reducer(state, action);
-    setState(nextState);
+    const newState = reducer(state, action);
+    setState(newState);
   }
 
   return [state, dispatch];
